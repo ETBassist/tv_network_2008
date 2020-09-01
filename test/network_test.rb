@@ -29,6 +29,15 @@ class NetworkTest < Minitest::Test
   end
 
   def test_can_find_main_characters
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
     assert_equal [@kitt], @nbc.main_characters
+  end
+
+  def test_can_get_actors_by_show
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    expected = {@knight_rider => [@michael_knight, @kitt], @parks_and_rec => [@leslie_knope, @ron_swanson]}
+    assert_equal expected, @nbc.actors_by_show
   end
 end
