@@ -44,4 +44,14 @@ class Network
     shows_hash
   end
 
+  def prolific_actors
+    actor_array = []
+    shows_by_actor.each do |actor, show|
+      if show.length >= 2
+        actor_array << actor
+      end
+    end
+    actor_array
+  end
+
 end

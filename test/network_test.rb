@@ -54,4 +54,11 @@ class NetworkTest < Minitest::Test
                 "Nick Offerman" => [@parks_and_rec] }
     assert_equal expected, @nbc.shows_by_actor
   end
+
+  def test_can_get_prolific_actors
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    @nbc.add_show(@baywatch)
+    assert_equal ["David Hasselhoff"], @nbc.prolific_actors 
+  end
 end
