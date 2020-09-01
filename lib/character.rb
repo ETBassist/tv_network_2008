@@ -10,4 +10,8 @@ class Character
   def actor
     @character_hash[:actor]
   end
+
+  def salary
+    @character_hash[:salary]
+  end
 end
