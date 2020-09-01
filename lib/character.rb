@@ -6,4 +6,8 @@ class Character
   def name
     @character_hash[:name]
   end
+
+  def actor
+    @character_hash[:actor]
+  end
 end
