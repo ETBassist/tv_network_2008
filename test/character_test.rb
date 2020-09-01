@@ -13,4 +13,8 @@ class CharacterTest < Minitest::Test
     assert_equal "KITT", @kitt.name
   end
 
+  def test_can_get_actor
+    assert_equal "William Daniels", @kitt.actor
+  end
+
 end
