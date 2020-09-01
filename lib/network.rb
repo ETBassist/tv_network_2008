@@ -30,4 +30,18 @@ class Network
     actors_hash
   end
 
+  def shows_by_actor
+    shows_hash = {}
+    @shows.each do |show|
+      show.actors.each do |actor|
+        if shows_hash.has_key?(actor)
+          shows_hash[actor] << show
+        else
+          shows_hash.store(actor, [show])
+        end
+      end
+    end
+    shows_hash
+  end
+
 end
