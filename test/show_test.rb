@@ -14,7 +14,7 @@ class ShowTest < Minitest::Test
   def test_can_get_attributes
     assert_equal "Knight Rider", @knight_rider.name
     assert_equal "Glen Larson", @knight_rider.creator
-    assert_equal [@kitt, @michael_knight], @knight_rider.characters
+    assert_equal [@michael_knight, @kitt], @knight_rider.characters
   end
 
 end
